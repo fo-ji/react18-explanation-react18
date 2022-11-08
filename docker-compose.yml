@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: react18-explanation-react18
+    volumes:
+      - ./client:/usr/src/app
+    command: sh -c 'yarn && yarn start'
+    ports:
+      - '3000:3000'
+    tty: true
